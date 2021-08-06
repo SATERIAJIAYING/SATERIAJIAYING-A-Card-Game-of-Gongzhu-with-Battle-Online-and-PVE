@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{5E4AC17F-EBD9-4D51-8683-19B2F3BC75DB}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>gongzhu</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CDlgGame.h" />
+    <ClInclude Include="CDlgLink.h" />
+    <ClInclude Include="Com.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="gongzhu.h" />
+    <ClInclude Include="gongzhuDlg.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="net.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CDlgGame.cpp" />
+    <ClCompile Include="CDlgLink.cpp" />
+    <ClCompile Include="Com.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="gongzhu.cpp" />
+    <ClCompile Include="gongzhuDlg.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="net.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gongzhu.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\gongzhu.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\poke\1.bmp" />
+    <Image Include="..\..\poke\10.bmp" />
+    <Image Include="..\..\poke\11.bmp" />
+    <Image Include="..\..\poke\12.bmp" />
+    <Image Include="..\..\poke\13.bmp" />
+    <Image Include="..\..\poke\14.bmp" />
+    <Image Include="..\..\poke\15.bmp" />
+    <Image Include="..\..\poke\16.bmp" />
+    <Image Include="..\..\poke\17.bmp" />
+    <Image Include="..\..\poke\18.bmp" />
+    <Image Include="..\..\poke\19.bmp" />
+    <Image Include="..\..\poke\2.bmp" />
+    <Image Include="..\..\poke\20.bmp" />
+    <Image Include="..\..\poke\21.bmp" />
+    <Image Include="..\..\poke\22.bmp" />
+    <Image Include="..\..\poke\23.bmp" />
+    <Image Include="..\..\poke\24.bmp" />
+    <Image Include="..\..\poke\25.bmp" />
+    <Image Include="..\..\poke\26.bmp" />
+    <Image Include="..\..\poke\27.bmp" />
+    <Image Include="..\..\poke\28.bmp" />
+    <Image Include="..\..\poke\29.bmp" />
+    <Image Include="..\..\poke\3.bmp" />
+    <Image Include="..\..\poke\30.bmp" />
+    <Image Include="..\..\poke\31.bmp" />
+    <Image Include="..\..\poke\32.bmp" />
+    <Image Include="..\..\poke\33.bmp" />
+    <Image Include="..\..\poke\34.bmp" />
+    <Image Include="..\..\poke\35.bmp" />
+    <Image Include="..\..\poke\36.bmp" />
+    <Image Include="..\..\poke\37.bmp" />
+    <Image Include="..\..\poke\38.bmp" />
+    <Image Include="..\..\poke\39.bmp" />
+    <Image Include="..\..\poke\4.bmp" />
+    <Image Include="..\..\poke\40.bmp" />
+    <Image Include="..\..\poke\41.bmp" />
+    <Image Include="..\..\poke\42.bmp" />
+    <Image Include="..\..\poke\43.bmp" />
+    <Image Include="..\..\poke\44.bmp" />
+    <Image Include="..\..\poke\45.bmp" />
+    <Image Include="..\..\poke\46.bmp" />
+    <Image Include="..\..\poke\47.bmp" />
+    <Image Include="..\..\poke\48.bmp" />
+    <Image Include="..\..\poke\49.bmp" />
+    <Image Include="..\..\poke\5.bmp" />
+    <Image Include="..\..\poke\50.bmp" />
+    <Image Include="..\..\poke\51.bmp" />
+    <Image Include="..\..\poke\52.bmp" />
+    <Image Include="..\..\poke\6.bmp" />
+    <Image Include="..\..\poke\7.bmp" />
+    <Image Include="..\..\poke\8.bmp" />
+    <Image Include="..\..\poke\9.bmp" />
+    <Image Include="..\..\poke\背景.bmp" />
+    <Image Include="..\poke\1.bmp" />
+    <Image Include="..\poke\10.bmp" />
+    <Image Include="..\poke\11.bmp" />
+    <Image Include="..\poke\12.bmp" />
+    <Image Include="..\poke\13.bmp" />
+    <Image Include="..\poke\14.bmp" />
+    <Image Include="..\poke\15.bmp" />
+    <Image Include="..\poke\16.bmp" />
+    <Image Include="..\poke\17.bmp" />
+    <Image Include="..\poke\18.bmp" />
+    <Image Include="..\poke\19.bmp" />
+    <Image Include="..\poke\2.bmp" />
+    <Image Include="..\poke\20.bmp" />
+    <Image Include="..\poke\21.bmp" />
+    <Image Include="..\poke\22.bmp" />
+    <Image Include="..\poke\23.bmp" />
+    <Image Include="..\poke\24.bmp" />
+    <Image Include="..\poke\25.bmp" />
+    <Image Include="..\poke\26.bmp" />
+    <Image Include="..\poke\27.bmp" />
+    <Image Include="..\poke\28.bmp" />
+    <Image Include="..\poke\29.bmp" />
+    <Image Include="..\poke\3.bmp" />
+    <Image Include="..\poke\30.bmp" />
+    <Image Include="..\poke\31.bmp" />
+    <Image Include="..\poke\32.bmp" />
+    <Image Include="..\poke\33.bmp" />
+    <Image Include="..\poke\34.bmp" />
+    <Image Include="..\poke\35.bmp" />
+    <Image Include="..\poke\36.bmp" />
+    <Image Include="..\poke\37.bmp" />
+    <Image Include="..\poke\38.bmp" />
+    <Image Include="..\poke\39.bmp" />
+    <Image Include="..\poke\4.bmp" />
+    <Image Include="..\poke\40.bmp" />
+    <Image Include="..\poke\41.bmp" />
+    <Image Include="..\poke\42.bmp" />
+    <Image Include="..\poke\43.bmp" />
+    <Image Include="..\poke\44.bmp" />
+    <Image Include="..\poke\45.bmp" />
+    <Image Include="..\poke\46.bmp" />
+    <Image Include="..\poke\47.bmp" />
+    <Image Include="..\poke\48.bmp" />
+    <Image Include="..\poke\49.bmp" />
+    <Image Include="..\poke\5.bmp" />
+    <Image Include="..\poke\50.bmp" />
+    <Image Include="..\poke\51.bmp" />
+    <Image Include="..\poke\52.bmp" />
+    <Image Include="..\poke\6.bmp" />
+    <Image Include="..\poke\7.bmp" />
+    <Image Include="..\poke\8.bmp" />
+    <Image Include="..\poke\9.bmp" />
+    <Image Include="..\poke\背景.bmp" />
+    <Image Include="res\gongzhu.ico" />
+    <Image Include="res\poke\1.bmp" />
+    <Image Include="res\poke\10.bmp" />
+    <Image Include="res\poke\11.bmp" />
+    <Image Include="res\poke\12.bmp" />
+    <Image Include="res\poke\13.bmp" />
+    <Image Include="res\poke\14.bmp" />
+    <Image Include="res\poke\15.bmp" />
+    <Image Include="res\poke\16.bmp" />
+    <Image Include="res\poke\17.bmp" />
+    <Image Include="res\poke\18.bmp" />
+    <Image Include="res\poke\19.bmp" />
+    <Image Include="res\poke\2.bmp" />
+    <Image Include="res\poke\20.bmp" />
+    <Image Include="res\poke\21.bmp" />
+    <Image Include="res\poke\22.bmp" />
+    <Image Include="res\poke\23.bmp" />
+    <Image Include="res\poke\24.bmp" />
+    <Image Include="res\poke\25.bmp" />
+    <Image Include="res\poke\26.bmp" />
+    <Image Include="res\poke\27.bmp" />
+    <Image Include="res\poke\28.bmp" />
+    <Image Include="res\poke\29.bmp" />
+    <Image Include="res\poke\3.bmp" />
+    <Image Include="res\poke\30.bmp" />
+    <Image Include="res\poke\31.bmp" />
+    <Image Include="res\poke\32.bmp" />
+    <Image Include="res\poke\33.bmp" />
+    <Image Include="res\poke\34.bmp" />
+    <Image Include="res\poke\35.bmp" />
+    <Image Include="res\poke\36.bmp" />
+    <Image Include="res\poke\37.bmp" />
+    <Image Include="res\poke\38.bmp" />
+    <Image Include="res\poke\39.bmp" />
+    <Image Include="res\poke\4.bmp" />
+    <Image Include="res\poke\40.bmp" />
+    <Image Include="res\poke\41.bmp" />
+    <Image Include="res\poke\42.bmp" />
+    <Image Include="res\poke\43.bmp" />
+    <Image Include="res\poke\44.bmp" />
+    <Image Include="res\poke\45.bmp" />
+    <Image Include="res\poke\46.bmp" />
+    <Image Include="res\poke\47.bmp" />
+    <Image Include="res\poke\48.bmp" />
+    <Image Include="res\poke\49.bmp" />
+    <Image Include="res\poke\5.bmp" />
+    <Image Include="res\poke\50.bmp" />
+    <Image Include="res\poke\51.bmp" />
+    <Image Include="res\poke\52.bmp" />
+    <Image Include="res\poke\6.bmp" />
+    <Image Include="res\poke\7.bmp" />
+    <Image Include="res\poke\8.bmp" />
+    <Image Include="res\poke\9.bmp" />
+    <Image Include="res\poke\背景.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\WAVE\亮牌音乐.wav" />
+    <Media Include="res\WAVE\倒计时4秒.wav" />
+    <Media Include="res\WAVE\出牌.wav" />
+    <Media Include="res\WAVE\出牌提示音.wav" />
+    <Media Include="res\WAVE\变压器.wav" />
+    <Media Include="res\WAVE\失败.wav" />
+    <Media Include="res\WAVE\游戏.wav" />
+    <Media Include="res\WAVE\猪.wav" />
+    <Media Include="res\WAVE\羊.wav" />
+    <Media Include="res\WAVE\胜利.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

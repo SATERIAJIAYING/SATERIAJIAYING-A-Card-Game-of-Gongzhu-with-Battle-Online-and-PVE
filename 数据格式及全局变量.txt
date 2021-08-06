@@ -1,0 +1,41 @@
+state==1   连接游戏阶段
+服务器发送ID重复：“A”
+服务器广播玩家更新：'B'+ID+'#'+gold+'#'+ID...按order顺序保存四名玩家数据，若有空则ID与gold为0
+服务器发送玩家已满：“C”
+客户端发送加入请求:  'L'+ID+'#'+端口+'#'
+服务器发送开始游戏：“Start”
+客户端发送换座信息：'E'+原座次+'#'+新座次+'#'
+客户端或者服务器发送离开信号：‘D’+order+'#'
+
+state==2  发牌阶段
+服务器发送发牌数据：'*'+“牌编号”+'!'+“牌编号”+'!'+...+“!”如："*1!2!3!4!5!6!7!8!9!10!11!12!13!"
+发送亮牌数据：'S'+order+boolSheep+boolTrans+boolHeartA+boolPig  如"S31010"
+服务器发送进入出牌阶段消息："PLAY"
+//客户端或者服务器发送离开信号：‘D’+order+'#'
+
+state==3  13轮的出牌阶段
+改变g_pGame->CurrentOrder的信号：‘O’+order+'#'
+出牌信号：'P'+order+'#'+cardint+'#'
+服务器发出重开信号：“Re”
+//客户端或者服务器发送离开信号：‘D’+order+'#'
+
+
+全局变量：
+int g_id;
+int g_order;//开始菜单1为主机，0为客户端
+string g_ipAddr;
+CDlgLink* g_pCDlgLink = 0;
+int g_state = 1;//1连接阶段 2发牌阶段
+
+int g_user_num = 1;
+user* g_pUser[4] = { 0 };//下标为order-1
+int temp=0,temp1=0, temp2=0;
+server* g_pServer =0 ;
+client* g_pClient =0 ;
+int g_c_port;
+Game* g_pGame;
+bool g_bShowCard;
+
+int g_second;
+CDlgGame* g_pCDlgGame = 0;
+Com* g_pCom[4];
